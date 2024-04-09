@@ -1,0 +1,127 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".HomeActivity">
+
+    <!-- Floor selection -->
+    <TextView
+        android:id="@+id/floor_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Floor"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/floor_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/floor_label"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/spinner_bg"
+        android:spinnerMode="dropdown"/>
+
+    <!-- Wing selection -->
+    <TextView
+        android:id="@+id/wing_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Wing"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/floor_spinner"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/wing_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wing_label"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/spinner_bg"
+        android:spinnerMode="dropdown"/>
+
+    <!-- Room selection -->
+    <TextView
+        android:id="@+id/room_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Select Room"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/wing_spinner"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/room_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/room_label"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/spinner_bg"
+        android:spinnerMode="dropdown"/>
+
+    <!-- TextView to display members in room -->
+    <TextView
+        android:id="@+id/members_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/room_spinner"
+        android:layout_marginTop="10dp"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:text="Members in Room: " />
+
+    <!-- Payment method selection -->
+    <TextView
+        android:id="@+id/payment_method_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Payment Method"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/members_text_view"
+        android:layout_marginTop="30dp"/>
+
+    <Spinner
+        android:id="@+id/payment_method_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/payment_method_label"
+        android:layout_marginTop="8dp"
+        android:prompt="@string/select_payment_method" />
+
+    <!-- Subscription duration selection -->
+    <TextView
+        android:id="@+id/subscription_duration_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Subscription Duration"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/payment_method_spinner"
+        android:layout_marginTop="16dp"/>
+
+    <Spinner
+        android:id="@+id/subscription_duration_spinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subscription_duration_label"
+        android:layout_marginTop="8dp"
+        android:prompt="@string/select_subscription_duration" />
+
+    <!-- Button for payments -->
+    <Button
+        android:id="@+id/payment_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/subscription_duration_spinner"
+        android:layout_marginTop="16dp"
+        android:text="Proceed to Payment"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
